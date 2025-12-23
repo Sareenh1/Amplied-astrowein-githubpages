@@ -1,73 +1,56 @@
-/* ---------- Global ---------- */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
-  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background: radial-gradient(circle at top, #1b0f3a, #050314);
   color: #ffffff;
-  line-height: 1.6;
 }
 
-/* ---------- Header ---------- */
+/* Header */
 header {
-  padding: 40px 20px;
   text-align: center;
+  padding: 40px 20px;
   background: linear-gradient(135deg, #7f00ff, #3f2b96);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 header h1 {
   font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 1px;
 }
 
 header p {
   margin-top: 10px;
-  font-size: 1.1rem;
   opacity: 0.9;
 }
 
-/* ---------- Navbar ---------- */
+/* Navbar */
 nav {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  background: rgba(10, 5, 30, 0.9);
+  gap: 25px;
+  background: #0c0724;
   padding: 15px;
-  backdrop-filter: blur(8px);
 }
 
 nav a {
-  color: #e0e0ff;
+  color: #ddd;
   text-decoration: none;
-  font-weight: 500;
-  position: relative;
+  font-weight: bold;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #a855f7;
-  left: 0;
-  bottom: -5px;
-  transition: width 0.3s;
+nav a:hover {
+  color: #c77dff;
 }
 
-nav a:hover::after {
-  width: 100%;
-}
-
-/* ---------- Hero Section ---------- */
+/* Hero */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 70px 20px;
 }
 
 .hero h2 {
@@ -79,73 +62,57 @@ nav a:hover::after {
 
 .hero p {
   margin: 15px 0 30px;
-  font-size: 1.2rem;
-  color: #dcdcff;
+  color: #ddd;
 }
 
 .hero button {
-  padding: 14px 35px;
-  font-size: 1rem;
+  padding: 14px 30px;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   background: linear-gradient(135deg, #ff9f1c, #ff4d6d);
-  color: #fff;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .hero button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(255, 77, 109, 0.6);
+  opacity: 0.9;
 }
 
-/* ---------- Services ---------- */
+/* Services */
 .services {
-  padding: 60px 40px;
+  padding: 50px 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  gap: 25px;
 }
 
 .card {
   background: linear-gradient(145deg, #120b2e, #1d1247);
-  border-radius: 18px;
   padding: 30px 20px;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 25px 50px rgba(168, 85, 247, 0.4);
 }
 
 .card span {
   font-size: 2.2rem;
-  display: block;
-  margin-bottom: 15px;
 }
 
 .card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-top: 15px;
 }
 
 .card p {
-  font-size: 0.95rem;
-  color: #cfcfff;
+  margin-top: 10px;
+  color: #ccc;
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 footer {
-  margin-top: 60px;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
   background: #08051c;
+  margin-top: 40px;
   font-size: 0.9rem;
-  color: #bdbdff;
-  border-top: 1px solid rgba(255,255,255,0.1);
 }
 

@@ -1,6 +1,4 @@
-/* =========================
-   Global Styles
-========================= */
+/* ---------- Global ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -8,26 +6,24 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at top, #1a1a40, #050514);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1b0f3a, #050314);
   color: #ffffff;
   line-height: 1.6;
 }
 
-/* =========================
-   Header
-========================= */
+/* ---------- Header ---------- */
 header {
+  padding: 40px 20px;
   text-align: center;
-  padding: 30px 20px;
-  background: linear-gradient(135deg, #7f00ff, #00c6ff);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #7f00ff, #3f2b96);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 header h1 {
   font-size: 3rem;
-  font-weight: bold;
-  letter-spacing: 2px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 header p {
@@ -36,23 +32,18 @@ header p {
   opacity: 0.9;
 }
 
-/* =========================
-   Navigation
-========================= */
+/* ---------- Navbar ---------- */
 nav {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
-  padding: 12px 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  gap: 30px;
+  background: rgba(10, 5, 30, 0.9);
+  padding: 15px;
+  backdrop-filter: blur(8px);
 }
 
 nav a {
-  color: #ffffff;
+  color: #e0e0ff;
   text-decoration: none;
   font-weight: 500;
   position: relative;
@@ -63,47 +54,33 @@ nav a::after {
   position: absolute;
   width: 0;
   height: 2px;
-  background: #00c6ff;
+  background: #a855f7;
   left: 0;
   bottom: -5px;
-  transition: width 0.3s ease;
+  transition: width 0.3s;
 }
 
 nav a:hover::after {
   width: 100%;
 }
 
-/* =========================
-   Hero Section
-========================= */
+/* ---------- Hero Section ---------- */
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3")
-    center/cover no-repeat;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-}
-
-.hero * {
-  position: relative;
 }
 
 .hero h2 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  background: linear-gradient(90deg, #c77dff, #4cc9f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
+  margin: 15px 0 30px;
   font-size: 1.2rem;
-  margin-bottom: 25px;
-  color: #ddd;
+  color: #dcdcff;
 }
 
 .hero button {
@@ -111,21 +88,19 @@ nav a:hover::after {
   font-size: 1rem;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(90deg, #ff9800, #ff5722);
+  background: linear-gradient(135deg, #ff9f1c, #ff4d6d);
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(255, 152, 0, 0.7);
+  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .hero button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 30px rgba(255, 152, 0, 1);
+  box-shadow: 0 15px 35px rgba(255, 77, 109, 0.6);
 }
 
-/* =========================
-   Services Section
-========================= */
+/* ---------- Services ---------- */
 .services {
   padding: 60px 40px;
   display: grid;
@@ -134,32 +109,43 @@ nav a:hover::after {
 }
 
 .card {
-  background: linear-gradient(145deg, #1e1e4d, #141432);
-  padding: 30px;
+  background: linear-gradient(145deg, #120b2e, #1d1247);
   border-radius: 18px;
+  padding: 30px 20px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 198, 255, 0.4);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(168, 85, 247, 0.4);
 }
 
-.card {
+.card span {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.card h3 {
   font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
-/* =========================
-   Footer
-========================= */
+.card p {
+  font-size: 0.95rem;
+  color: #cfcfff;
+}
+
+/* ---------- Footer ---------- */
 footer {
-  text-align: center;
+  margin-top: 60px;
   padding: 20px;
-  background: #07071a;
+  text-align: center;
+  background: #08051c;
   font-size: 0.9rem;
-  color: #aaa;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #bdbdff;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
